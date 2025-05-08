@@ -1,11 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import AppCard from "./components/AppCard";
 import TechFilter from "./components/TechFilter";
 import SearchInput from "./components/SearchInput";
 import { apps } from "./data/apps";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import Link from "next/link";
 
 export default function Home() {

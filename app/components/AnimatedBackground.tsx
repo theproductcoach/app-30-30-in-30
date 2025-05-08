@@ -11,7 +11,8 @@ const AnimatedBackground = () => {
   const particlesRef = useRef<THREE.Points | null>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
     // Initialize scene
     const scene = new THREE.Scene();
@@ -31,7 +32,7 @@ const AnimatedBackground = () => {
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     // Create particles
@@ -112,8 +113,8 @@ const AnimatedBackground = () => {
     // Cleanup
     return () => {
       window.removeEventListener("resize", handleResize);
-      if (containerRef.current && rendererRef.current) {
-        containerRef.current.removeChild(rendererRef.current.domElement);
+      if (container && rendererRef.current) {
+        container.removeChild(rendererRef.current.domElement);
       }
       scene.clear();
     };

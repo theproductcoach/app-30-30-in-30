@@ -1,16 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
 import { apps } from "@/app/data/apps";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function AppPage({ params }: PageProps) {
-  const app = apps.find((app) => app.slug === params.slug);
+export default async function AppPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  const app = apps.find((app) => app.slug === resolvedParams.slug);
 
   if (!app) {
     notFound();
