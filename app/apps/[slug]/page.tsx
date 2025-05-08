@@ -40,8 +40,10 @@ export default function AppPage({ params }: PageProps) {
         </Link>
 
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6">{app.title}</h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          <h1 className="text-4xl font-bold mb-6 text-center">
+            {app.title.replace(/^\d{2}\s*-\s*/, "")}
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 text-center">
             {app.description}
           </p>
 
