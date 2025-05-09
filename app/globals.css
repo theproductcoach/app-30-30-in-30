@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-gradient-text {
+  background: linear-gradient(90deg,
+      #4f46e5 0%,
+      #7c3aed 25%,
+      #4f46e5 50%,
+      #7c3aed 75%,
+      #4f46e5 100%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 8s linear infinite;
+  text-shadow: 0 0 20px rgba(79, 70, 229, 0.1);
+}

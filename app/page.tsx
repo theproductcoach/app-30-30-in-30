@@ -42,11 +42,15 @@ export default function Home() {
     <main className="min-h-screen relative">
       <div className="container mx-auto px-4 py-12 relative z-10 max-w-4xl">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
-            30 in 30
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-gradient-text">
+            30 Apps in 30 Days
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300">
-            Building 30 apps in 30 days to explore new technologies and ideas
+          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 text-justify">
+            A personal challenge to design, build, and ship 30 small web apps in
+            30 days. Each one explores a different idea, from AI tools and
+            productivity hacks to climbing companions and cooking helpers. Some
+            are polished, some are scrappy, but all were built fast and shared
+            in public.
           </p>
         </div>
 
@@ -55,6 +59,9 @@ export default function Home() {
           <SearchInput onSearch={handleSearch} />
           <TechFilter allTech={topTech} onFilterChange={setSelectedTech} />
         </div>
+
+        {/* Divider */}
+        <div className="border-t border-white/20 dark:border-gray-700/40 my-6" />
 
         {/* Results Count */}
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
@@ -93,7 +100,7 @@ export default function Home() {
                       <div className="relative p-4 md:p-6">
                         <div className="flex items-center gap-3 mb-2 md:mb-3">
                           <span className="text-lg md:text-xl font-semibold text-blue-500 dark:text-blue-400">
-                            #{index + 1}
+                            Day {index + 1}
                           </span>
                           <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
                             {app.title.replace(/^\d{2}\s*-\s*/, "")}

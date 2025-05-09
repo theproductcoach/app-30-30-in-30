@@ -35,7 +35,7 @@ export const apps: App[] = [
   {
     title: "03 - Flappy Bird Clone",
     slug: "flappy-bird-clone",
-    description: "A simple but fun browser-based clone of Flappy Bird using PNG sprites. Built for mobile and playable via Android Studio dev build.",
+    description: "A simple but fun browser-based clone of Flappy Bird using PNG's.",
     learnings: [
       "Tried using a sprite sheet but failed to get coordinates working reliably",
       "Used PNG images instead for consistent visual results",
@@ -97,10 +97,10 @@ export const apps: App[] = [
   {
     title: "08 - Kilter Climbing Coach",
     slug: "kilter-coach",
-    description: "A simple climbing app that generates a daily kilterboard training plan. Originally planned to personalise based on username and API data.",
+    description: "A simple climbing app that generates a kilterboard training plan. Originally planned to personalise based on username and API data, but that will have to come later.",
     learnings: [
-      "Wanted to use Kilter APIs but they required a third-party Python library",
-      "Scoped it down to a simple daily plan generator",
+      "Wanted to use Kilter APIs but that required a third-party Python library",
+      "Scoped it down to a simple plan generator",
       "Quick to build, may revisit later with more complex integration"
     ],
     tech: ["Next.js", "Tailwind CSS", "Vercel"],
@@ -121,10 +121,10 @@ export const apps: App[] = [
   {
     title: "10 - HikeScout",
     slug: "hikescout",
-    description: "A weekend hike trip planner that recommends routes from London, shows maps, and uses image generation for visual context.",
+    description: "A weekend hike trip planner that recommends routes from around the world, shows maps, and uses image generation for visual context.",
     learnings: [
       "Got everything working in 90 minutes — including Unsplash API integration",
-      "Tried using DALL·E but it slowed performance",
+      "Tried using DALL·E but it slowed performance too much",
       "Would use Google Image Search or a custom dataset long term"
     ],
     tech: ["Next.js", "Unsplash API", "Google Maps", "Tailwind CSS", "Vercel"],
@@ -160,7 +160,7 @@ export const apps: App[] = [
     learnings: [
       "Built from a real-world problem my partner's parents are facing",
       "Ran into typing issues that required GPT to re-architect the code",
-      "Cursor with Claude 3.7 struggled — reminder to use multiple tools"
+      "Cursor with Claude 3.7 struggled — reminder to use multiple tools and get GPT to do the heavy lifting"
     ],
     tech: ["Next.js", "Tailwind CSS", "Vercel"],
     link: "https://30-in-30-app-13.vercel.app/"
@@ -220,9 +220,10 @@ export const apps: App[] = [
     learnings: [
       "Cursor still struggles mixing Tailwind and global CSS",
       "Keeping global styles clean is tricky — needs a better strategy",
-      "Quiz logic and layout were quick to implement"
+      "Quiz logic and layout were quick to implement",
+      "Used OpenAI API to generate the quiz questions and answers"
     ],
-    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+    tech: ["Next.js", "Tailwind CSS", "Vercel", "OpenAI API"],
     link: "https://30-in-30-app-18.vercel.app/"
   },
   {
@@ -244,7 +245,8 @@ export const apps: App[] = [
     learnings: [
       "Used LangGraph and tool-calling for real agentic behaviour",
       "Got agent thought streaming working — magical!",
-      "Learnt a lot deploying FastAPI to Render and wiring up to Next.js frontend"
+      "Learnt a lot deploying FastAPI to Render and wiring up to Next.js frontend",
+      "Would have styled the output better if I had more time"
     ],
     tech: ["Next.js", "FastAPI", "LangGraph", "OpenAI API", "Tailwind CSS", "Render", "Vercel"],
     link: "https://30-in-30-app-20.vercel.app/"
@@ -290,7 +292,7 @@ export const apps: App[] = [
     slug: "discovr",
     description: "An assistant that helps product managers gather insights from uploaded notes and files, then generate next steps using GPT.",
     learnings: [
-      "Used Assistants API again — struggled with file referencing",
+      "Used Assistants API again — struggled with file referencing because the API docs are so new and had to cross reference with GPT itself",
       "Streaming responses was harder than expected due to misleading docs",
       "A solid MVP for structured product discovery"
     ],
@@ -304,7 +306,7 @@ export const apps: App[] = [
     learnings: [
       "Built on request from my partner (an interior designer)",
       "Conversion logic worked well, but needed UX cleanup",
-      "Planning to refactor and make it more robust later"
+      "Did a quick refactor to make it more robust later"
     ],
     tech: ["Next.js", "Tailwind CSS", "Vercel"],
     link: "https://30-in-30-app-25.vercel.app/"
@@ -324,7 +326,7 @@ export const apps: App[] = [
   {
     title: "27 - Is It Hotdog? (Pizza Edition)",
     slug: "is-it-hotdog",
-    description: "An AI-powered image classifier inspired by the classic 'Not Hotdog' app — this time detecting pizza instead.",
+    description: "An AI-powered image classifier inspired by the classic 'Not Hotdog' app from Silicon Valley — this time detecting pizza instead.",
     learnings: [
       "Used Vercel Blob storage and GPT Vision for image analysis",
       "Really simple and fast to get working with new tools",
@@ -360,7 +362,7 @@ export const apps: App[] = [
   {
     title: "30 - 30 in 30 Directory",
     slug: "30-in-30-directory",
-    description: "The final app — a directory of all 30 projects, complete with descriptions, learnings, and links to each live build.",
+    description: "The final app. A directory of all 30 projects, complete with descriptions, learnings, and links to each live build.",
     learnings: [
       "Reflected on the entire challenge and documented key learnings",
       "Built a clean, responsive directory to showcase all projects",
